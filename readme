@@ -1,0 +1,3 @@
+Dockerized nginx to with tsl 1.3 and http2
+
+A nginx reverse proxy for 10 servers

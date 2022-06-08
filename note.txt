@@ -1,0 +1,12 @@
+TLS Termination
+-> Nginx has TLS but backend is not
+-> Nginx terminate TLS and decrypts and send unencrypted (only admin can see)
+-> Terminate TLS, decrypted, optionally rewrite and re-encrypt the contend to backend
+-> Nginx can look at the L7 data, rewrite headers, cache but needs to share the backend certificate or at least has its own
+
+TLS Passthrough
+-> Backend is TLS
+-> Nginx proxies/streams the packets directly to backend
+-> TLS handshake is forwarded all the way to the backend
+-> Just like a tunnel
+-> No caching since Nginx does not have the TLS certificate (L4 check only)
