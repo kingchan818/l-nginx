@@ -51,6 +51,6 @@ app.get('/', async (req: Request, res: Response) => {
     res.json({ students, teachers });
 });
 
-app.listen(9999, () => {
+app.listen(process.env.PORT, () => {
     console.log(`Server started on port 9999 on ${process.env.CONTAINERID}`);
 });
